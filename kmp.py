@@ -30,25 +30,6 @@ next = k.partial(n)
 status = k.search(s,n)
 print next
 print status
-
-void getNext(char a[], int n, int next[]){
-	int i, j;
-	i = 0;
-	next[0] = -1;#首元跳转值为-1
-	j = -1;
-	#递推得到next表中剩余值
-	while(i < n){
-		if(j == -1 || a[i] == a[j]){
-			++i;
-			++j;
-			next[i] = j;
-		}
-		else{
-			j = next[j];
-		}
-	}
-}
-
 def p(str):
 	s = str
 	length = len(str)
